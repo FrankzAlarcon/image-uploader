@@ -42,7 +42,6 @@ function setDragAndDropEvents() {
   const dropContainer = document.querySelector('.drag-drop-container');
 
   dropContainer.addEventListener('dragover', (ev) => {
-    console.log('File(s) in drop zone');
     // Prevent default behavior (Prevent file from being opened)
     ev.preventDefault();
     dropContainer.classList.add('active');
@@ -56,7 +55,6 @@ function setDragAndDropEvents() {
   });
 
   dropContainer.addEventListener('drop', (ev) => {
-    console.log('Fichero(s) arrastrados');
     ev.preventDefault();
     
     file = ev.dataTransfer.files;
@@ -167,6 +165,5 @@ async function uploadToImgBB(file) {
     body: formData
   })
   const data = await response.json();
-  console.log(data)
   return data.data.url;
 }
