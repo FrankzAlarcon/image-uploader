@@ -159,7 +159,7 @@ function showUploadedImage(url) {
 }
 
 async function uploadToImgBB(file) {
-  const apiKey = 'https://api.imgbb.com/1/upload?key=bae4947d89a877bdfeb8fe3a3ecde280';
+  const apiKey = `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_API_KEY}`;
   const formData = new FormData();
   formData.append('image', file);
   const response = await fetch(apiKey, {
