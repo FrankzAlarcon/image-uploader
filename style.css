@@ -1,0 +1,235 @@
+:root {
+
+  --poppins-font: 'Poppins', sans-serif;
+  --sans-font: 'Noto Sans', sans-serif;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--poppins-font);
+  padding: 1rem;
+}
+
+.container {
+  padding: 3rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  max-width: 50rem;
+  height: min-content;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.56);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.56);
+  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.56);
+  background-color: #fff;
+}
+
+.spinner-container {
+  display: none;
+  padding: 3rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 90%;
+  max-width: 50rem;
+  height: min-content;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.56);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.56);
+  box-shadow: 0px 0px 4px 0px rgba(255, 255, 255, 0.56);
+  background-color: #fff;
+  color: #000;
+}
+
+@media(min-width: 768px){
+    .container {
+      padding: 4rem 5rem;
+    }
+}
+
+.container .top-title {
+  color: #000;
+}
+
+.top-title .title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.top-title p {
+  font-size: 1rem;
+  text-align: center;
+  color: #828282;
+  margin: 1rem 0;
+}
+
+.drag-drop-container {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1.5px dashed #97BEF4;
+  margin: 0 auto;
+}
+
+.drag-drop-container.active {
+  background-color: #e9f0fc;  
+}
+
+.drag-drop-container img {
+  display: block;
+  margin: 2rem auto;
+  width: 50%;
+}
+.drag-drop-container p {
+  font-size: 12px;
+  color: #BDBDBD;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.bottom p {
+  color: #000;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.bottom .choose-file-button {
+  display: block;
+  width: 11rem;
+  height: 3.2rem;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #2F80ED;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: var(--sans-font);
+  transition: .5s ease;
+}
+
+.bottom .choose-file-button:hover {
+  cursor: pointer;
+  background-color: #126ade;
+}
+
+.uploaded-image {
+  display: block;
+  width: 100%;
+}
+
+.uploaded-successfully-icon {
+  width: 4rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.copy-link-container {
+  margin: 2rem 0 1rem 0;
+  width: 100%;
+  display: flex;
+  border: 1px solid #E0E0E0;
+  border-radius: .8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-text {
+  padding: 1rem;
+  background-color: #F6F8FB;
+  font-family: var(--poppins-font);
+  font-size: 1rem;
+  color: #000;
+  width: 80%;
+  border: none;
+}
+
+.copy-link-button {
+  padding: .9rem;
+  width: 30%;
+  background-color: #2F80ED;
+  border-radius: .8rem;
+  border: none;
+  font-family: var(--poppins-font);
+  font-size: 1.2rem;
+  transition: .5s ease;
+}
+
+.copy-link-button:hover {
+  background-color: #2c87fd;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.spinner {
+  margin: 1rem auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #2F80ED;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
