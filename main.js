@@ -121,7 +121,7 @@ function showUploadedImage(url) {
   p.remove()
 
   const checkedImage = document.createElement('img');
-  checkedImage.src = './img/checked.png'
+  checkedImage.src = '/img/checked.png'
   checkedImage.alt = 'Uploaded Successfully';
   checkedImage.classList.add('uploaded-successfully-icon');
   document.querySelector('.top-title').insertBefore(checkedImage, title)
